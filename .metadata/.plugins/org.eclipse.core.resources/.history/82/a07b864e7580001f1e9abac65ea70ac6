@@ -1,0 +1,11 @@
+package main;
+
+import java.util.HashSet;
+import java.util.Stack;
+
+public class StacktoJS {
+	public void stackJS () {
+		Stack<String>StackonJS = new Stack()<>();
+		
+	}
+}

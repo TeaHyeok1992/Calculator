@@ -1,0 +1,69 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+
+
+public class firstInfirstOut {
+	
+	public static void main(String[]args) {
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+		StringTokenizer st;
+		int result =0;
+		
+		
+		
+			try {
+				br=new BufferedReader(new InputStreamReader(System.in));
+				//BufferedReader 입력
+				bw=new BufferedWriter(new OutputStreamWriter(System.out));
+				//BufferedWriter 출력
+				int value = Integer.parseInt(br.readLine());
+				//입력값
+				for(int i=0;i<value;i++) {
+					st = new StringTokenizer(br.readLine(),"");
+					//StringTokenizer사용해서 수식을 담음
+					int left=Integer.parseInt(st.nextToken());
+					//왼쪽 숫자
+					String operation = st.nextToken();
+					//가운데 기호
+					int right=Integer.parseInt(st.nextToken());
+					//오른쪽 숫자
+					
+					if(operation.equals("+")) {
+						result += left + right;
+						//더하기
+					
+					}else if(operation.equals("-")){
+						result += left - right;
+						//빼기
+					
+					}else if(operation.equals("*")) {
+						result += left * right;
+						//곱하기
+						
+					}else {
+						result += left / right;
+						//나누기
+					}
+					bw.write(String.valueOf(result));
+					//BufferedWriter에 결과값 담아서
+					bw.flush();//발사
+					br.close();//안닫으면 리소스 낭비
+					bw.close();//안닫으면 리소스 낭비
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+	}
+	
+
+	
+}

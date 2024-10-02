@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/onclick.js"></script> <!--버튼식 계산기 js-->
+    <link rel="stylesheet" href="../css/screen.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/ASCII.js"></script><!--키보드입력 계산기 js-->
+    <script src="../js/BackSpace.js"></script> <!--백 스페이스 함수-->
+
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript 계산기</h3>
+    <div id="keyframe">
+        <input type="text" class="value" id="display" readonly placeholder="과정" onchange="Divide()">
+        <input type="text" class="done" readonly="readonly" id="finish" placeholder="결과">
+        <hr style="border: none;">
+        <div id="numbers">
+            <button type="button" class="keypad" onclick="add(1)">1</button>
+            <button type="button" class="keypad" onclick="add(2)">2</button>
+            <button type="button" class="keypad" onclick="add(3)">3</button>
+            <button type="button" class="keypad" onclick="eradicate()">←</button>
+
+        <hr style="border: none;">
+            <button type="button" class="keypad" onclick="add(4)">4</button>
+            <button type="button" class="keypad" onclick="add(5)">5</button>
+            <button type="button" class="keypad" onclick="add(6)">6</button>
+            <button type="button" class="keypad" onclick="add('.')">.</button>
+        <hr style="border: none;">
+            <button type="button" class="keypad" onclick="add(7)">7</button>
+            <button type="button" class="keypad" onclick="add(8)">8</button>
+            <button type="button" class="keypad" onclick="add(9)">9</button>
+            <button type="button" class="keypad" onclick="add(0)">0</button>
+        </div>
+        <hr style="border: none;">
+        <div id="operation">
+            <button type="button" class="operpad" onclick="add('+')">+</button>
+            <button type="button" class="operpad" onclick="add('-')">-</button>
+            <button type="button" class="operpad" onclick="add('*')">*</button>
+            <button type="button" class="operpad" onclick="add('/')">/</button>
+        </div>
+        <hr style="border: none;">
+        <div id="result">
+            <button type="button" id="Clear" class="res" onclick="reset()">C</button>
+            <button type="button" id="Equal" class="res" onclick="calculation()">=</button>
+        </div>
+    </div>    
+</body>
+</html>

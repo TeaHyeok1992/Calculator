@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\CITUS\Desktop\Calculator\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3648361381.index
+1952979296.index

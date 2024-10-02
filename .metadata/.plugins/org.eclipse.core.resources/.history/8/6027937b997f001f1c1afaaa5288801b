@@ -1,0 +1,25 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.file.attribute.AclEntry;
+import java.util.ArrayList;
+import java.util.List;
+
+public class firstInfirstOut {
+	
+	public static void main(String[]args) {
+		BufferedReader br = null;
+		List<String> typed = new ArrayList<>();
+		try {
+			br=new BufferedReader(new InputStreamReader(System.in));
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+	
+
+	
+}

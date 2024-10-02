@@ -1,0 +1,16 @@
+package main;
+
+import java.io.BufferedReader;
+import java.nio.file.attribute.AclEntry;
+import java.util.ArrayList;
+import java.util.List;
+
+public class firstInfirstOut {
+	
+	public static void main(String[]args) {
+		
+	}
+	
+
+	
+}

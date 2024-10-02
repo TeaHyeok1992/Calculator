@@ -1,0 +1,7 @@
+package main;
+
+public class StacktoJS {
+	public void stackJS () {
+		
+	}
+}

@@ -1,0 +1,61 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+
+
+public class firstInfirstOut {
+	
+	public static void main(String[]args) {
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+		StringTokenizer st;
+		int result =0;
+		
+		
+		
+			try {
+				br=new BufferedReader(new InputStreamReader(System.in));
+				bw=new BufferedWriter(new OutputStreamWriter(System.out));
+				int value = Integer.parseInt(br.readLine());
+				for(int i=0;i<value;i++) {
+					st = new StringTokenizer(br.readLine(),"");
+					int left=Integer.parseInt(st.nextToken());
+					String operation = st.nextToken();
+					int right=Integer.parseInt(st.nextToken());
+					
+					if(operation.equals("+")) {
+						result += left + right;
+						//더하기
+					
+					}else if(operation.equals("-")){
+						result += left - right;
+						//빼기
+					
+					}else if(operation.equals("*")) {
+						result += left * right;
+						//곱하기
+						
+					}else {
+						result += left / right;
+						//나누기
+					}
+					bw.write(String.valueOf(result));
+					bw.flush();
+					br.close();//안닫으면 리소스 낭비
+					bw.close();//안닫으면 리소스 낭비
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+	}
+	
+
+	
+}

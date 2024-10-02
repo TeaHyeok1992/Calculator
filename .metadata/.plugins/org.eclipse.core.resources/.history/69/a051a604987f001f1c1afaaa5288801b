@@ -1,0 +1,14 @@
+package main;
+
+import java.io.BufferedReader;
+
+public class main {
+	public static void main(String[]args) {
+		BufferedReader br = null;
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

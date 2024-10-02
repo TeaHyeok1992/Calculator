@@ -1,0 +1,13 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Stack;
+
+public class StacktoJS {
+	public void stackJS () {
+	List<String> inputString= new ArrayList<>();
+		
+	}
+}
