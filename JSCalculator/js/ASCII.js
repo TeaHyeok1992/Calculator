@@ -22,21 +22,10 @@ function add(char){
 
 function onlyNumeric(event){
     
-        // 아스키 코드를 가져오기
-        var acode=event.key.charCodeAt(0);
-        if(event.key == "Process"){
-            //일반 문자열 걸러내기
-            console.log("한글은 입력할수 없습니다.")
-           
-        }else if(58<=acode){    
-            //영문자,사칙연산 이외의 기호 걸러내기
-            console.log("영문자,특수기호 사용불가능")
-        }else{
-            
-            
-
-        }
-    
+        const input = event.target.value;
+        event.target.value = input.replace(/[가-힣a-zA-Z]/g, '');
+        console.log("영문자가 제거되었습니다.")
+        
         // var z= e.key.charCodeAt(0);
         // console.log(e.key.charCodeAt(0));
         // console.log(z); // 눌린 키의 문자를 아스키로 변환

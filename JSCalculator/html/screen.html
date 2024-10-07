@@ -21,9 +21,9 @@
             class="value" 
             id="display" 
             placeholder="과정"
-            onkeydown="onlyNumeric(event)"
+            onInput="onlyNumeric(event)"
         >
-        <input type="checkbox" class="checkpad" checked onclick="ckboxed()"> 키보드사용
+        <input type="checkbox" class="checkpad" checked onclick="ckboxed()" readonly="false"> 키보드사용
         <input type="text" class="done" readonly="readonly" id="finish" placeholder="결과">
         <hr style="border: none;">
         <div id="numbers">
@@ -58,26 +58,6 @@
     </div>    
 </body>
 <script type="text/JavaScript">
-    //화면 전역에 걸어주는 Callback
-    window.addEventListener("keydown",function(e){
-        //전역에 걸어주는 매서드
-        if(e.defaultedPrevented){
-            return;
-        }
-        var handler = false;
-        if(58<=e.keyCode){
-            //영문자,사칙연산 이외의 특수기호 사용불가능
-            handler=true;
-        }
-        //화면 전역 콜백을 넣어도 한글을 막을수는 없다...
-        //어떻게 하면 한글을 막을수 있을까
-
-        // 1. HTML에서 UTF-8 에서 ISO식으로 막는다 
-        //-- 문제점 1 . 한글이 깨진다
-        if(handler){
-            console.log(e.keyCode);
-            e.preventDefault();
-        }
-    },true);
+    
 </script>
 </html>
