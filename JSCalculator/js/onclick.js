@@ -28,7 +28,15 @@ function calculation(){
     var retur=eval(values.value);
     //eval은 계산하는 매서드
     var fin=document.getElementById('finish');
-    fin.value=retur;
+    if(retur == NaN){
+        
+    }else if(retur == undefined){
+
+    }else{
+        fin.value=retur;
+
+    }
+
 }    
 function reset(){
     var values=document.getElementById('display');
