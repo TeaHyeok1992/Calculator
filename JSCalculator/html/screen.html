@@ -8,12 +8,14 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/ASCII.js"></script><!--키보드입력 계산기 js-->
     <script src="../js/BackSpace.js"></script> <!--백 스페이스 함수-->
-    <script src="../js/checkbox.js"></script><!--체크박스 함수-->>
+    <script src="../js/checkbox.js"></script><!--체크박스 함수-->
+    <script src="../js/viewHistory.js"></script>
 
     <title>JavaScript 계산기</title>
 </head>
 <body>
     <h3>JavaScript 계산기</h3>
+    
     <div id="keyframe">
         <input 
             type="text"
@@ -44,6 +46,11 @@
             <button type="button" class="keypad" onclick="add(0)">0</button>
         </div>
         <hr style="border: none;">
+        <div id="history">
+            <button type="button" class="operpad" onclick="saveHistory()" id="savebtn">저장</button>
+            <button type="button" class="operpad" onclick="viewHistory()" id="printbtn">출력</button>
+        </div>
+        <hr style="border: none;">
         <div id="operation">
             <button type="button" class="operpad" onclick="add('+')">+</button>
             <button type="button" class="operpad" onclick="add('-')">-</button>
@@ -55,7 +62,8 @@
             <button type="button" id="Clear" class="res" onclick="reset()">C</button>
             <button type="button" id="Equal" class="res" onclick="calculation()">=</button>
         </div>
-    </div>    
+    </div>
+    <div id="historyDisplay"></div>    
 </body>
 <script type="text/JavaScript">
     

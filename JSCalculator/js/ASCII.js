@@ -31,8 +31,10 @@ function onlyNumeric(event){
         event.target.value = input.replace(/[A-Za-z\u1100-\u11FF\u3131-\u318E\uAC00-\uD7A3]/g,'');
         //A-Z 영문대문자
         //a-z 영문소문자
-
+        console.log(event);
         console.log("영문자,한글이 제거되었습니다.")
+        //제어문으로 사칙연산 조사
+        
 
         // event.target.value = input.replace(choPattern,'');
         // console.log("한글초성이 제거되었습니다.")
@@ -41,9 +43,8 @@ function onlyNumeric(event){
         // event.target.value = input.replace(jongPattern,'');
         // console.log("한글종성이 제거되었습니다.")
         //정규표현식을 통한 입력시 자동삭제 기능
-        //-- 문제점1. 한글 초성 인식이 안됨
-        //-- 접근방식 유니코드로 초중종성 다 확인해서 막는방법
-        //-- 다른방식
+        //^\x00-\x7F 기본적인 아스키만 입력가능하게 해주는 유니코드 
+        //문제점-- replace를 두번 사용할 경우 위에 기능이 동작하지않음
         
 
 
