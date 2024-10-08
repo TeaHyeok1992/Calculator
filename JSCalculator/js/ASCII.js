@@ -22,26 +22,23 @@ function add(char){
 
 function onlyNumeric(event){
     
-        const input = event.target.value;
+    const choPattern = /[\u3131-\u314E]/g;  // 한글 초성의 유니코드 범위
+    const joongPattern = /[\u314F-\u3163]/g;  // 한글 중성의 유니코드 범위
+    const jongPattern = /[\u11A8-\u11C2]/g;  // 한글 종성의 유니코드 범위
+    const input = event.target.value;
         event.target.value = input.replace(/[가-힣a-zA-Z]/g, '');
         console.log("영문자가 제거되었습니다.")
+        event.target.value = input.replace(choPattern,'');
+        console.log("한글초성이 제거되었습니다.")
+        event.target.value = input.replace(joongPattern,'');
+        console.log("한글중성이 제거되었습니다.")
+        event.target.value = input.replace(jongPattern,'');
+        console.log("한글종성이 제거되었습니다.")
+        //정규표현식을 통한 입력시 자동삭제 기능
+        //-- 문제점1. 한글 초성 인식이 안됨
+        //-- 접근방식 유니코드로 초중종성 다 확인해서 막는방법
+        //-- 다른방식
         
-        // var z= e.key.charCodeAt(0);
-        // console.log(e.key.charCodeAt(0));
-        // console.log(z); // 눌린 키의 문자를 아스키로 변환
-        // var x= String.fromCharCode(z); // 아스키를 다시 문자로 변환
-
-        // if(42<= z <=43 && 45<= z <=57){
-        //     add(x);
-        // }else{
-        //     //실행하지 않음
-        // }
-
-        //특정상황에서 NaN 변수 특정되어 원인 파악 필요
-        //-- 아마 Keydown에서 잡는값이 없는것 같음
-        //onchange 걸었을떄 -- 값이누적됨
-        //oninput 걸었을떄 값이 무한루프 돔
-        //정규표현식으로 INPUT자체에 제한을 두었을떄 한글인식 불가능
 
 
         

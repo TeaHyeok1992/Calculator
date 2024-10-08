@@ -9,6 +9,7 @@ h3{
 }
 
 #keyframe {
+    padding: 10px;
     border: 1px solid;
     width: 400px;
     height: auto;
@@ -45,16 +46,18 @@ h3{
 }
 
 .value{
-    width: 190px;
+
+    width: 240px;
     height: 30px;
     border-radius: 5px;
     margin-left: 15px;
+    margin-bottom: 10px;
     text-align: right;
     
 }
 
 .done{
-    width: 190px;
+    width: 240px;
     height: 30px;
     border-radius: 5px;
     margin-left: 15px;
