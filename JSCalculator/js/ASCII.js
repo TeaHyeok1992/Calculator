@@ -22,18 +22,19 @@ function add(char){
 
 function onlyNumeric(event){
     
-    const choPattern = /[\u3131-\u314E]/g;  // 한글 초성의 유니코드 범위
-    const joongPattern = /[\u314F-\u3163]/g;  // 한글 중성의 유니코드 범위
-    const jongPattern = /[\u11A8-\u11C2]/g;  // 한글 종성의 유니코드 범위
+    // const choPattern = /[\u3131-\u314E]/g;  // 한글 초성의 유니코드 범위
+    // const joongPattern = /[\u314F-\u3163]/g;  // 한글 중성의 유니코드 범위
+    // const jongPattern = /[\u11A8-\u11C2]/g;  // 한글 종성의 유니코드 범위
+    
     const input = event.target.value;
         event.target.value = input.replace(/[가-힣a-zA-Z]/g, '');
         console.log("영문자가 제거되었습니다.")
-        event.target.value = input.replace(choPattern,'');
-        console.log("한글초성이 제거되었습니다.")
-        event.target.value = input.replace(joongPattern,'');
-        console.log("한글중성이 제거되었습니다.")
-        event.target.value = input.replace(jongPattern,'');
-        console.log("한글종성이 제거되었습니다.")
+        // event.target.value = input.replace(choPattern,'');
+        // console.log("한글초성이 제거되었습니다.")
+        // event.target.value = input.replace(joongPattern,'');
+        // console.log("한글중성이 제거되었습니다.")
+        // event.target.value = input.replace(jongPattern,'');
+        // console.log("한글종성이 제거되었습니다.")
         //정규표현식을 통한 입력시 자동삭제 기능
         //-- 문제점1. 한글 초성 인식이 안됨
         //-- 접근방식 유니코드로 초중종성 다 확인해서 막는방법
