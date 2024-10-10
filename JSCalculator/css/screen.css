@@ -1,8 +1,4 @@
 
-
-
-
-
 h3{
     font-size: 24px;
     font-weight: 900;
@@ -11,6 +7,7 @@ h3{
 #keyframe {
     padding: 10px;
     border: 1px solid;
+    border-bottom: nones;
     width: 400px;
     height: auto;
     border-radius: 10px;
@@ -62,4 +59,16 @@ h3{
     border-radius: 5px;
     margin-left: 15px;
     text-align: right;
+}
+
+#historyDisplay{
+    border: 1px solid;
+    border-top: none;
+    width: 420px;
+    height: 140px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 900;
+    background: linear-gradient(to bottom,#1f21de,#f82fa2,#e0f836);
+    color: #000000;
 }

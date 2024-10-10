@@ -1,7 +1,3 @@
-
-
-
-
 function eradicate(){
     var screen =document.getElementById('display').value;
     console.log(screen);

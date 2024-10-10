@@ -21,8 +21,6 @@ function add(char){
         numeric = true ;
     }
 }
-
-
 function calculation(){
     var values=document.getElementById('display');
     var retur=eval(values.value);
@@ -36,7 +34,6 @@ function calculation(){
         fin.value=retur;
 
     }
-
 }    
 function reset(){
     var values=document.getElementById('display');

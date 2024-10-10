@@ -1,10 +1,11 @@
-let history = [];
-let historyIndex =-1;
+let history = [];//배열
+let historyIndex =-1;//인덱스
 
 function saveHistory(){
     const ctext = document.getElementById('display').value;
     if (ctext && (historyIndex === -1 || history[historyIndex] !== ctext)) {
         history.push(ctext);
+        //히스토리 배열에 디스플레이된 문자열을 추가하는 방식
         historyIndex = history.length - 1; // 새로운 입력이므로 인덱스를 업데이트
         updateHistoryDisplay();
         document.getElementById('display').value = ''; // 입력 필드 초기화

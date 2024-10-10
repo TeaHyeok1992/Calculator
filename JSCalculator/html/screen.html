@@ -10,6 +10,7 @@
     <script src="../js/BackSpace.js"></script> <!--백 스페이스 함수-->
     <script src="../js/checkbox.js"></script><!--체크박스 함수-->
     <script src="../js/viewHistory.js"></script><!--히스토리 기록, 추출-->
+    <link href="../css/screen.css" media="screen and (min-width: 400px) and (max-width: 1000px)" rel="stylesheet">
 
     <title>JavaScript 계산기</title>
 </head>
@@ -17,14 +18,7 @@
     <h3>JavaScript 계산기</h3>
     
     <div id="keyframe">
-        <input 
-            type="text"
-            name="displayText" 
-            class="value" 
-            id="display" 
-            placeholder="과정"
-            onInput="onlyNumeric(event)"
-        >
+        <input type="text" name="displayText" class="value" id="display" placeholder="과정"onInput="onlyNumeric(event)">
         <input type="checkbox" class="checkpad" checked onclick="ckboxed()" readonly="false"> 키보드사용
         <input type="text" class="done" readonly="readonly" id="finish" placeholder="결과">
         <hr style="border: none;">
