@@ -24,6 +24,7 @@ function updateHistoryDisplay() {
 function viewHistory(){
     if (history.length > 0) {
         const blob = new Blob([history.join('\n')], { type: 'text/plain' });
+        //바이너리데이터 저장을 (데이터 배열, 데이터 처리 타입) 에 맞춰서 할것입니다.
         //이진 데이터 저장가능한 객체 선언
         const url = URL.createObjectURL(blob);
         //URL 객체 선언
