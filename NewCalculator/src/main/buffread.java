@@ -7,7 +7,6 @@ public class buffread {
 	public static void main(String[]args) {
 		BufferedReader br = null;
 		try {
-			String type;
 			br=new BufferedReader(new InputStreamReader(System.in));
 			System.out.println(br.readLine());
 		} catch (Exception e) {

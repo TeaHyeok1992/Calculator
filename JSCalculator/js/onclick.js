@@ -8,6 +8,7 @@ function add(char){
 
         if(isNaN(char)==true){
             //연산자가 두번나올경우에는 입력하지 않습니다.
+            //NaN= not a Number (숫자가 아님)
         }else{
             document.getElementById('display').value += char;
         }
